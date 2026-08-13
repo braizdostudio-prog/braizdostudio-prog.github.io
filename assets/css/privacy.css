@@ -1,0 +1,129 @@
+:root {
+  --bg: #000000;
+  --bg-soft: #141216;
+  --card: #17151a;
+  --card-border: #2a2530;
+  --cream: #ede1c9;
+  --cream-dim: #b9ae98;
+  --flame-1: #c81e0a;
+  --flame-2: #ff5c1a;
+  --flame-3: #ffb648;
+  --text: #eae6de;
+  --text-dim: #9b968f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+.topbar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--card-border);
+  padding: 10px 0;
+}
+
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.lang-switch a {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--text-dim);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--cream);
+  border-color: var(--card-border);
+}
+
+.lang-switch a[aria-current="page"] {
+  color: var(--flame-3);
+  border-color: var(--card-border);
+  background: var(--bg-soft);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px 64px;
+}
+
+.doc {
+  width: 100%;
+  max-width: 720px;
+}
+
+a.back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a.back:hover { color: var(--cream); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 32px 40px;
+}
+
+.card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  color: var(--cream);
+  margin-top: 0;
+}
+
+.card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--flame-3);
+  margin-top: 30px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--cream-dim);
+  margin-top: 20px;
+}
+
+.card p, .card li { color: var(--text); }
+
+.card .updated {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-top: -8px;
+}
+
+.card a { color: var(--flame-3); }
+
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 28px 0;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
