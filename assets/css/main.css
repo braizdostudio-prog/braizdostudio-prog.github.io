@@ -287,3 +287,17 @@ footer .footer-top {
   border-radius: 50%;
   opacity: 0.85;
 }
+
+.footer-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-badges img {
+  display: block;
+  height: 54px;
+  width: auto;
+}
