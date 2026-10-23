@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Braizdo Studio — Estudio de juegos móviles</title>
 <meta name="description" content="Braizdo Studio crea juegos móviles. Descubre nuestros juegos disponibles en Google Play y App Store.">
+<meta name="theme-color" content="#0A0807">
 <link rel="canonical" href="https://braizdostudio-prog.github.io/es/">
 <meta property="og:title" content="Braizdo Studio">
 <meta property="og:description" content="Estudio independiente de juegos móviles.">
@@ -19,85 +20,144 @@
 <link rel="alternate" hreflang="es" href="https://braizdostudio-prog.github.io/es/">
 <link rel="alternate" hreflang="pt" href="https://braizdostudio-prog.github.io/pt/">
 <link rel="alternate" hreflang="x-default" href="https://braizdostudio-prog.github.io/en/">
+<script>try{var d=document.documentElement;if(sessionStorage.getItem('bz-intro'))d.style.setProperty('--intro','0.3');sessionStorage.setItem('bz-intro','1')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 
-<div class="topbar">
-  <nav class="lang-switch" aria-label="Idioma">
-    <a href="../fr/">FR</a>
-    <a href="../en/">EN</a>
-    <a href="../de/">DE</a>
-    <a href="../it/">IT</a>
-    <a href="./" aria-current="page">ES</a>
-    <a href="../pt/">PT</a>
-  </nav>
-</div>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
-<header class="hero">
-  <h1 class="sr-only">Braizdo Studio</h1>
-  <img class="hero-banner" src="../assets/hero-banner.jpg" alt="Braizdo Studio">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <img src="../assets/mark-96.png" width="36" height="36" alt="">
+      <span><b>B</b>raizdo</span>
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="#games">Juegos</a>
+      <a class="nav-link" href="mailto:braizdo.studio@gmail.com">Contacto</a>
+      <details class="lang">
+        <summary><span class="sr-only">Idioma : </span>ES <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8l4-3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></summary>
+        <ul>
+          <li><a href="../fr/" lang="fr" hreflang="fr">Français <span>FR</span></a></li>
+          <li><a href="../en/" lang="en" hreflang="en">English <span>EN</span></a></li>
+          <li><a href="../de/" lang="de" hreflang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="../it/" lang="it" hreflang="it">Italiano <span>IT</span></a></li>
+          <li><a href="../es/" lang="es" hreflang="es" aria-current="page">Español <span>ES</span></a></li>
+          <li><a href="../pt/" lang="pt" hreflang="pt">Português <span>PT</span></a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
 </header>
 
-<main>
-  <div class="wrap">
-    <section id="juegos">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-smoke s1" aria-hidden="true"></div>
+  <div class="hero-smoke s2" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <canvas class="embers" aria-hidden="true"></canvas>
+
+  <div class="hero-content">
+    <h1 class="hero-logo">
+      <img class="logo-enso" src="../assets/img/logo-enso-1052.webp" srcset="../assets/img/logo-enso-560.webp 560w, ../assets/img/logo-enso-1052.webp 1052w" sizes="(max-width: 620px) 84vw, 520px" width="1052" height="724" alt="" fetchpriority="high">
+      <img class="logo-wordmark" src="../assets/img/logo-wordmark-1052.webp" srcset="../assets/img/logo-wordmark-560.webp 560w, ../assets/img/logo-wordmark-1052.webp 1052w" sizes="(max-width: 620px) 84vw, 520px" width="1052" height="324" alt="Braizdo Studio">
+    </h1>
+    <p class="tagline"><span class="w" style="--i:0">Cada</span> <span class="w" style="--i:1">mundo</span> <span class="w" style="--i:2">comienza</span> <span class="w" style="--i:3">con</span> <span class="w" style="--i:4">un</span> <span class="w" style="--i:5"><em>trazo</em>.</span></p>
+    <div class="hero-cta">
+      <a class="btn btn-ember" href="#games">Descubre nuestros juegos</a>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#games">Desliza<i aria-hidden="true"></i></a>
+</section>
+
+<main id="main">
+  <section class="section section-games" id="games">
+    <div class="wrap">
       <div class="section-head">
-        <h2>Nuestros juegos</h2>
-        <p>Aquí encontrarás todos los juegos publicados por Braizdo Studio.</p>
+        <span class="eyebrow" data-reveal="fade">El catálogo</span>
+        <h2 class="section-title" data-reveal="ink">Nuestros juegos</h2>
+        <svg class="brush-divider" viewBox="0 0 320 22" aria-hidden="true"><path pathLength="1" d="M4 13 C 60 5, 120 18, 170 10 S 270 6, 300 12"/><circle cx="310" cy="11" r="3"/></svg>
+        <p class="section-lead" data-reveal="fade">Aquí encontrarás todos los juegos publicados por Braizdo Studio.</p>
       </div>
 
       <div class="games-grid">
 
-        <article class="game-card">
-          <div class="game-card-top">
-            <img class="game-icon" src="../assets/games/warcarta-icon.png" alt="Icono del juego Warcarta">
-            <h3 class="game-title">Warcarta</h3>
-          </div>
-          <p class="game-desc">Juego de estrategia de conquista por turnos con IA, cartas, héroes y campañas.</p>
-          <div class="game-links">
-            <div class="store-links">
-              <a class="store-btn active" href="https://play.google.com/store/apps/details?id=com.warcarta.mobile" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.6c-.4.3-.6.8-.6 1.4v16c0 .6.2 1.1.6 1.4l9.3-9.4-9.3-9.4Z"/><path d="M15.9 12l2.5-1.4L5.5 2.7c-.3-.2-.6-.3-.9-.3l11.3 9.6Z"/><path d="M18.4 13.4L15.9 12l-11.3 9.6c.3.1.6 0 .9-.2l12.9-8Z"/><path d="M21.4 10.7l-3-1.7-2.7 3 2.7 3 3-1.7c.8-.5.8-2.1 0-2.6Z"/></svg>
-                Google Play
-              </a>
-              <span class="store-btn disabled">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 12.3c0-1.8 1-2.7 1-2.7s-1.4-1.9-3.4-1.9c-1.6 0-2.4.9-3.2.9-.8 0-1.5-.9-3-.9-1.8 0-3.7 1.4-3.7 4.2 0 2.6 1.9 6.5 3.6 6.5.9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1.6 0 3.6-4 3.6-6.1-1.4-.6-1.7-1.9-1.7-2.9v-.1Z"/><path d="M14.7 5.9c.6-.7 1-1.6.9-2.6-.9.1-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5 1-.1 1.9-.6 2.5-1.2Z"/></svg>
-                App Store — próximamente
-              </span>
+        <div class="card-slot is-wide" data-reveal="card">
+          <article class="game-card is-featured" data-tilt>
+            <div class="game-inner">
+              <img class="game-icon" src="../assets/img/warcarta-icon-256.webp" srcset="../assets/img/warcarta-icon-256.webp 256w, ../assets/img/warcarta-icon-512.webp 512w" sizes="168px" width="168" height="168" alt="Icono del juego Warcarta" loading="lazy">
+              <div class="game-body">
+                <ul class="tags"><li>Estrategia</li><li>Por turnos</li><li class="is-live">Disponible</li></ul>
+                <h3 class="game-title">Warcarta</h3>
+                <p class="game-desc">Juego de estrategia de conquista por turnos con IA, cartas, héroes y campañas.</p>
+                <div class="game-actions">
+                  <a class="btn btn-ember" href="https://play.google.com/store/apps/details?id=com.warcarta.mobile" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.6c-.4.3-.6.8-.6 1.4v16c0 .6.2 1.1.6 1.4l9.3-9.4-9.3-9.4Z"/><path d="M15.9 12l2.5-1.4L5.5 2.7c-.3-.2-.6-.3-.9-.3l11.3 9.6Z"/><path d="M18.4 13.4L15.9 12l-11.3 9.6c.3.1.6 0 .9-.2l12.9-8Z"/><path d="M21.4 10.7l-3-1.7-2.7 3 2.7 3 3-1.7c.8-.5.8-2.1 0-2.6Z"/></svg>
+                    Google Play
+                  </a>
+                  <span class="btn btn-soon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 12.3c0-1.8 1-2.7 1-2.7s-1.4-1.9-3.4-1.9c-1.6 0-2.4.9-3.2.9-.8 0-1.5-.9-3-.9-1.8 0-3.7 1.4-3.7 4.2 0 2.6 1.9 6.5 3.6 6.5.9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1.6 0 3.6-4 3.6-6.1-1.4-.6-1.7-1.9-1.7-2.9v-.1Z"/><path d="M14.7 5.9c.6-.7 1-1.6.9-2.6-.9.1-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5 1-.1 1.9-.6 2.5-1.2Z"/></svg>
+                    App Store — próximamente
+                  </span>
+                  <a class="privacy-link" href="privacy/warcarta.html">Política de privacidad</a>
+                </div>
+              </div>
             </div>
-            <a class="privacy-link" href="privacy/warcarta.html">Política de privacidad</a>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <article class="game-card placeholder">
-          <div>
-            <div class="plus">+</div>
-            <p>Un nuevo juego de Braizdo Studio llega pronto</p>
-          </div>
-        </article>
+        <div class="card-slot" data-reveal="card">
+          <article class="game-card is-soon">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path class="soon-enso" d="M92 26 A 44 44 0 1 0 100 70"/><circle class="soon-core" cx="60" cy="60" r="4"/></svg>
+            <h3 class="soon-title">En la forja</h3>
+            <p class="soon-text">Un nuevo juego de Braizdo Studio llega pronto</p>
+          </article>
+        </div>
 
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <img class="footer-mark" src="../assets/mark-96.png" alt="">
-      <p>&copy; 2026 Braizdo Studio. Todos los derechos reservados.</p>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="../assets/mark-96.png" width="52" height="52" alt="" loading="lazy">
+      <div>
+        <strong><b>B</b>raizdo Studio</strong>
+        <p>© 2026 Braizdo Studio. Todos los derechos reservados.</p>
+        <a class="footer-contact" href="mailto:braizdo.studio@gmail.com">braizdo.studio@gmail.com</a>
+      </div>
     </div>
+    <nav aria-label="Idioma">
+      <ul class="footer-langs">
+        <li><a href="../fr/" lang="fr" hreflang="fr" title="Français">FR</a></li>
+        <li><a href="../en/" lang="en" hreflang="en" title="English">EN</a></li>
+        <li><a href="../de/" lang="de" hreflang="de" title="Deutsch">DE</a></li>
+        <li><a href="../it/" lang="it" hreflang="it" title="Italiano">IT</a></li>
+        <li><a href="../es/" lang="es" hreflang="es" title="Español" aria-current="page">ES</a></li>
+        <li><a href="../pt/" lang="pt" hreflang="pt" title="Português">PT</a></li>
+      </ul>
+    </nav>
     <div class="footer-badges">
       <a href="https://pixelpicked.com/game/5wxuFmDjP3j/warcarta/" target="_blank" rel="noopener">
-        <img src="https://api.pixelpicked.com/api/badges/5wxuFmDjP3j/live.png?theme=dark" width="250" height="54" alt="Approved on PixelPicked" />
+        <img src="https://api.pixelpicked.com/api/badges/5wxuFmDjP3j/live.png?theme=dark" width="250" height="54" alt="Approved on PixelPicked" loading="lazy">
       </a>
     </div>
   </div>
 </footer>
 
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="../assets/js/site.js"></script>
+<script defer src="../assets/js/embers.js"></script>
+<script defer src="../assets/js/trail.js"></script>
+<script defer src="../assets/js/cards.js"></script>
+<script defer src="../assets/js/motion.js"></script>
 </body>
 </html>
